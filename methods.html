@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Medical Health</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.1/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.css" rel="stylesheet">
+    <style>
+        .progress-bar {
+            height: 8px;
+            background-color: #4a90e2;
+            transition: width 0.1s;
+        }
+
+        .progress-container {
+            background-color: #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 8px;
+            width: 100%;
+        }
+
+        .toast {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background-color: #4a90e2;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            /* Ensure it's above other content */
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-pink-100 border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="breastlogo.svg" class="h-8" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-pink-700 dark:text-white">Women's
+                    Health</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-pink-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li><a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                    </li>
+                    <li><a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Objectives</a>
+                    </li>
+                    <li><a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Methods</a>
+                    </li>
+                    <li><a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-4xl text-3xl font-bold text-center title-font text-gray-900 mb-4">Methods to apply
+                </h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-700">
+                    This study enlisted 103 students enrolled in first year in a nursing department. Students were
+                    randomized into artificial intelligence-assisted screen-based simulations practice group (n = 52)
+                    and standard patient simulation group (n = 51). Data were collected using student description form,
+                    breast self-examination
+                    checklist, student satisfaction and self-confidence in learning scale, Spielberger's state and trait
+                    anxiety
+                    inventory.
+                </p>
+            </div>
+            <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-100 rounded-lg shadow-md flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-indigo-500 w-8 h-8 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium text-gray-900">103 students should enrolled in first year in a nursing department</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-100 rounded-lg shadow-md flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-indigo-500 w-8 h-8 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium text-gray-900">artificial intelligence-assisted screen-based simulations</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-100 rounded-lg shadow-md flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-indigo-500 w-8 h-8 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium text-gray-900">screen-based simulations practice group (n = 52)</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-100 rounded-lg shadow-md flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-indigo-500 w-8 h-8 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium text-gray-900">standard patient simulation group (n = 51)</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-100 rounded-lg shadow-md flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-indigo-500 w-8 h-8 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium text-gray-900">Data were collected using student description form</span>
+                    </div>
+                </div>
+                <div class="p-2 sm:w-1/2 w-full">
+                    <div class="bg-gray-100 rounded-lg shadow-md flex p-4 h-full items-center">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" class="text-indigo-500 w-8 h-8 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                            <path d="M22 4L12 14.01l-3-3"></path>
+                        </svg>
+                        <span class="title-font font-medium text-gray-900">Must:student satisfaction and self-confidence in learning scale</span>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-lg text-lg">Learn
+                More</button>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <div class="flex-grow w-full max-w-4xl bg-white p-6 mx-auto rounded-lg shadow-lg">
+        <video id="simulationVideo" class="w-full rounded-lg" controls>
+            <source src="new arrival.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="mt-4">
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        Great! You have completed the task.
+    </div>
+    <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/12fc3595-7e26-4b77-9111-cbe986aef865/webchat/v2/config.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-pink-100 rounded-lg shadow dark:bg-gray-900 mt-6">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="breastlogo.svg" class="h-8" alt="Flowbite Logo" />
+                    <span
+                        class="self-center text-2xl font-semibold whitespace-nowrap text-pink-700 dark:text-white">Women's
+                        Health</span>
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-600 sm:mb-0 dark:text-gray-400">
+                    <li><a href="#" class="hover:underline text-pink-600 dark:text-pink-500 me-4 md:me-6">About</a></li>
+                    <li><a href="#" class="hover:underline text-pink-600 dark:text-pink-500 me-4 md:me-6">Privacy
+                            Policy</a></li>
+                    <li><a href="#" class="hover:underline text-pink-600 dark:text-pink-500 me-4 md:me-6">Licensing</a>
+                    </li>
+                    <li><a href="#" class="hover:underline text-pink-600 dark:text-pink-500">Contact</a></li>
+                </ul>
+            </div>
+            <hr class="my-6 border-pink-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-600 sm:text-center dark:text-gray-400">© 2023 <a
+                    href="https://flowbite.com/" class="hover:underline text-pink-600 dark:text-pink-500">Flowbite™</a>.
+                All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('simulationVideo');
+            const progressBar = document.getElementById('progressBar');
+            const toast = document.getElementById('toast');
+
+            // Update the progress bar based on video time
+            video.addEventListener('timeupdate', function () {
+                const percentage = (video.currentTime / video.duration) * 100;
+                progressBar.style.width = percentage + '%';
+            });
+
+            // Show toast and redirect to the next page when the video ends
+            video.addEventListener('ended', function () {
+                toast.style.display = 'block'; // Show toast
+                setTimeout(() => {
+                    toast.style.display = 'none'; // Hide toast after 3 seconds
+                    window.location.href = 'next-page.html'; // Change this to your next page URL
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+
+</html>

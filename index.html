@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Medical Health</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.1/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="breastcancer.png">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+  apiKey: "AIzaSyCO4j4SIcDIJWAPRUNN9T3LnpbmI7tHe1o",
+  authDomain: "women-shealthbreastselfexam.firebaseapp.com",
+  projectId: "women-shealthbreastselfexam",
+  storageBucket: "women-shealthbreastselfexam.appspot.com",
+  messagingSenderId: "131810140827",
+  appId: "1:131810140827:web:73dac5659074a22b531c3e",
+  measurementId: "G-BNE354WW9Z"
+};
+
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+    </script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-pink-100 border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="breastlogo.svg" class="h-8" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-pink-700 dark:text-white">Women's
+                    Health</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-pink-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-pink-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-pink-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Objectives</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Methods</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-pink-200 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li>
+                </ul>
+                <div class="flex space-x-4">
+                    <a href="login.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Login</a>
+                    <a href="signup.html" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <section class="text-gray-600 body-font bg-pink-100">
+            <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+                <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
+                    src="breastcancer.png">
+                <div class="text-center lg:w-2/3 w-full">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Background</h1>
+                    <p class="mb-8 leading-relaxed">Breast self-examination is important in the early diagnosis of
+                        breast cancer. The use of traditional
+                        education methods is insufficient for student nurses to gain breast self-examination skills in
+                        nurse education. New
+                        and different education methods are needed to gain skills in nurse education.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap -m-4">
+                    <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                        <div class="h-full text-center">
+                            <img alt="testimonial"
+                                class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+                                src="objective.png">
+                            <p class="leading-relaxed">The aim of this study was to evaluate the effectiveness of
+                                artificial intelligence-assisted screen-based
+                                simulations practice and standard patient simulation in teaching breast self-examination
+                                skills in nursing undergraduate students.</p>
+                            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Objectives</h2>
+                            <p class="text-gray-500">Our Team</p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                        <div class="h-full text-center">
+                            <img alt="testimonial"
+                                class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+                                src="method.png">
+                            <p class="leading-relaxed">This study enlisted 103 students enrolled in first year in a
+                                nursing department. Students were randomized into artificial intelligence-assisted
+                                screen-based simulations practice group (n = 52) and standard patient simulation group
+                                (n = 51). Data were collected using student description form, breast self-examination
+                                checklist, student satisfaction and self-confidence in learning scale, Spielberger's
+                                state and trait anxiety inventory.</p>
+                            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Methods</h2>
+                            <p class="text-gray-500">Our Team</p>
+                            <a href="ab"
+                                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 lg:mb-0 p-4">
+                        <div class="h-full text-center">
+                            <img alt="testimonial"
+                                class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
+                                src="result.png">
+                            <p class="leading-relaxed">The highest score regarding the total score means of breast
+                                self-examination skills belonged to the
+                                standard patient simulation group, and the differences between the groups were found to
+                                be statistically significant (p < 0.05). Although the mean score of anxiety levels of
+                                    the students' artificial intelligence-assisted screen-based simulations practice
+                                    group was higher than the standard patient simulation (p < 0.05). The mean score of
+                                    the students' satisfaction with the simulation was higher in artificial
+                                    intelligence-assisted screen-based simulations practice group than the standard
+                                    patient simulation group (p < 0.05).</p>
+                                    <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                                    <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Result</h2>
+                                    <p class="text-gray-500" style="margin: 14px;">Our Team</p>
+
+                                    <a href="methods.html"
+                                        class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300">
+                                        Start here
+                                    </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/12fc3595-7e26-4b77-9111-cbe986aef865/webchat/v2/config.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-pink-100 rounded-lg shadow dark:bg-gray-900 m-4 p-6">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="breastlogo.svg" class="h-8" alt="Flowbite Logo" />
+                    <span
+                        class="self-center text-2xl font-semibold whitespace-nowrap text-pink-700 dark:text-white">Women's
+                        Health</span>
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-600 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#" class="hover:underline text-pink-600 dark:text-pink-500 me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline text-pink-600 dark:text-pink-500 me-4 md:me-6">Privacy
+                            Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline text-pink-600 dark:text-pink-500 me-4 md:me-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline text-pink-600 dark:text-pink-500">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-pink-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-600 sm:text-center dark:text-gray-400">© 2023 <a href="breastlogo.svg"
+                    class="hover:underline text-pink-600 dark:text-pink-500">Flowbite™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+</body>
+
+</html>
